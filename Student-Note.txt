@@ -1,0 +1,387 @@
+Introduction to Generative AI
+==================================
+
+Definition: Generative AI refers to a class of artificial intelligence systems designed to generate new content, often in the form of images, text, or even entire datasets. These systems have the ability to create content that wasn't explicitly programmed, showcasing a form of machine creativity.
+
+Generative AI refers to the branch of artificial intelligence that focuses on creating models capable of generating new content, such as text, images, music, or even videos. These models are trained to understand patterns and structures in the data they are exposed to and use that knowledge to generate new, original content.
+
+Large Language Models (LLMs), like OpenAI's GPT-3, are a type of generative AI model specifically designed for natural language processing tasks. They are trained on vast amounts of text data and can generate coherent and contextually relevant text based on the input they receive. LLMs utilize deep learning techniques, such as transformers, to capture the statistical patterns and semantic relationships in the training data, enabling them to generate human-like text.
+
+LLMs have shown impressive capabilities in various language-related tasks, such as text completion, text generation, translation, summarization, and more. They can take a prompt or a partial sentence as input and generate a complete, contextually appropriate response. LLMs have been used in applications like chatbots, virtual assistants, content generation, and even creative writing.
+
+Generative AI, including LLMs, has the potential to revolutionize content creation and assist in various domains. However, it also raises concerns about the responsible use of AI-generated content, including issues of bias, misinformation, and ethics. Therefore, it is crucial to consider the ethical implications and potential risks associated with the deployment and use of generative AI models.
+
+========================
+LLM
+=======
+
+A large language model refers to a type of artificial intelligence model that has been trained on a massive amount of text data to understand and generate human-like language. These models are typically based on deep learning techniques, such as recurrent neural networks (RNNs) or transformer architectures.
+
+Large language models, like OpenAI's GPT-3, are trained on diverse sources of text data, such as books, articles, websites, and other textual resources. The training process involves exposing the model to a vast amount of text and teaching it to predict the next word or sequence of words based on the context it has learned. Through this process, the model learns the statistical patterns, grammar, and semantic relationships present in the training data.
+
+Once trained, a large language model can be used for various natural language processing tasks, such as text generation, translation, summarization, question answering, and more. These models have shown impressive capabilities in generating coherent and contextually relevant text, often indistinguishable from human-written content.
+
+
+
+Responsible AI
+=====================
+
+- Fairness: AI systems should treat all people fairly. This means that the systems should not create or reinforce unfair bias and should respect human rights, diversity, and the autonomy of individuals.
+
+
+- Reliability and Safety: AI systems should perform reliably and safely. They should be built and tested for safety, reliability, and security. They should operate reliably under normal circumstances and respond safely to unanticipated conditions.
+
+
+- Privacy and Security: AI systems should be secure and respect privacy. They should incorporate privacy design principles and protect data privacy. They should also ensure the security of data.
+
+
+- Inclusiveness: AI systems should empower everyone and engage people. They should be inclusive and accessible, and should not involve or result in unfair discrimination against individuals, communities, or groups.
+
+
+- Transparency: AI systems should be understandable. They should provide meaningful information, appropriate to the context, and consistent with the state of the art, to foster a general understanding of AI systems.
+
+
+- Accountability: People should be accountable for AI systems. This means that organizations or individuals should ensure the proper functioning of the AI systems that they design, develop, operate, or deploy, in accordance with their roles and applicable regulatory frameworks.
+
+============================================================
+GPT models
+====================
+
+GPT-3
+
+Released in 2020, GPT-3 was a groundbreaking large language model with 175 billion parameters. It could generate human-quality text, translate languages, write different kinds of creative content, and answer your questions in an informative way.
+
+GPT-3.5
+
+GPT-3.5, released in 2022, was an improvement over GPT-3 with 580 billion parameters. It offered better performance and more capabilities, including:
+
+    ChatGPT: A version of GPT-3.5 optimized for conversational chat.
+    GPT-3.5 Turbo: A faster and more cost-effective version of GPT-3.5.
+
+GPT-4
+
+GPT-4, released in 2023, is the latest generation of GPT models. It has a staggering 1.5 trillion parameters and is capable of:
+
+    Multimodal processing: GPT-4 can analyze and comment on images and graphics, unlike GPT-3.5 which can only analyze text.
+    Fine-grained control: You can instruct GPT-4 to specify its tone of voice and task (e.g., “Always speak like Yoda”).
+
+GPT-4-32k
+
+GPT-4-32k is a variant of GPT-4 with 32k tokens of context, allowing it to handle longer and more complex tasks.
+
+Here's a table summarizing the key features of each model:
+Model	Parameters	Key Features
+GPT-3	175 billion	Human-quality text generation, translation, creative content generation, informative answers
+GPT-3.5	580 billion	Improved performance and capabilities, ChatGPT, GPT-3.5 Turbo
+GPT-4	1.5 trillion	Multimodal processing, fine-grained control
+GPT-4-32k	1.5 trillion	32k tokens of context for longer and more complex tasks
+
+
+Create open AI 
+---------------------
+
+az cognitiveservices account create \
+-n MyOpenAIResource \
+-g MyResourceGroup \
+-l eastus \
+--kind OpenAI \
+--sku s0 \
+--subscription subscriptionID
+
+How to use the Azure OpenAI
+==================================
+1. First apply for it 
+2. Create an Azure OpenAI service 
+3. Go to the OpenAI Studio 
+4. Create a model and deployment 
+
+
+
+GPT-3.5-Turbo model availability
+=====================================
+
+Model ID	Model Availability	Max Request (tokens)	Training Data (up to)
+gpt-35-turbo1 (0301)	East US	4096	Sep 2021
+	France Central
+	South Central US
+	UK South
+	West Europe
+gpt-35-turbo (0613)	Australia East	4096	Sep 2021
+	Canada East
+	East US
+	East US 2
+	France Central
+	Japan East
+	North Central US
+	Sweden Central
+	Switzerland North
+	UK South
+gpt-35-turbo-16k (0613)	Australia East	16,384	Sep 2021
+	Canada East
+	East US
+	East US 2
+	France Central
+	Japan East
+	North Central US
+	Sweden Central
+	Switzerland North
+	UK South
+gpt-35-turbo-instruct (0914)	East US	4097	Sep 2021
+	Sweden Central
+gpt-35-turbo (1106)	Australia East	Input: 16,385	Sep 2021
+	Canada East	Output: 4,096
+	France Central
+	South India
+	Sweden Central
+	UK South
+	West US
+
+From <https://learn.microsoft.com/en-GB/azure/ai-services/openai/concepts/models#model-summary-table-and-region-availability> 
+
+
+Model ID	Max Request (tokens)	Training Data (up to)
+gpt-4 (0314)	8,192	Sep 2021
+gpt-4-32k(0314)	32,768	Sep 2021
+gpt-4 (0613)	8,192	Sep 2021
+gpt-4-32k (0613)	32,768	Sep 2021
+gpt-4 (1106-preview)1	Input: 128,000	Apr 2023
+	Output: 4096
+
+From <https://learn.microsoft.com/en-GB/azure/ai-services/openai/concepts/models#model-summary-table-and-region-availability> 
+
+
+==========================================
+OpenAI model’s version
+
+GPT-3
+(ada, babbage, curie, davinci)
+
+
+GPT-3.5
+(gpt-3.5-turbo, gpt-3.5-turbo-0301,text-davinci-003, text-davinci-002)*
+
+GPT-4-8K
+
+GPT-4-32K
+==========================================
+
+az cognitiveservices account deployment create \
+   -g myResourceGroupName \
+   -n MyOpenAIResource \
+   --deployment-name my-text-curie-001 \
+   --model-name text-curie-001 \
+   --model-version "1"  \
+   --model-format OpenAI \
+   --scale-settings-scale-type "Standard"
+   
+==============================================   
+When using the Completions playground, you can set the following parameters:
+----------------------
+Temperature:
+--------------
+
+ Controls randomness. Lowering the temperature means that the model produces more repetitive and deterministic responses. Increasing the temperature results in more unexpected or creative responses. Try adjusting temperature or Top P but not both.
+ 
+ 
+Max length (tokens):
+----------------------
+ Set a limit on the number of tokens per model response. The API supports a maximum of 4000 tokens shared between the prompt (including system message, examples, message history, and user query) and the model's response. One token is roughly four characters for typical English text.
+
+
+Stop sequences:
+-----------------
+
+ Make responses stop at a desired point, such as the end of a sentence or list. Specify up to four sequences where the model will stop generating further tokens in a response. The returned text won't contain the stop sequence.
+ 
+ 
+Top probabilities (Top P):
+-----------------------------
+ Similar to temperature, this controls randomness but uses a different method. Lowering Top P narrows the model’s token selection to likelier tokens. Increasing Top P lets the model choose from tokens with both high and low likelihood. Try adjusting temperature or Top P but not both.
+ 
+ 
+ 
+Frequency penalty:
+---------------------
+
+ Reduce the chance of repeating a token proportionally based on how often it has appeared in the text so far. This decreases the likelihood of repeating the exact same text in a response.
+ 
+Presence penalty:
+---------------------
+
+ Reduce the chance of repeating any token that has appeared in the text at all so far. This increases the likelihood of introducing new topics in a response.
+  
+Pre-response text:
+---------------------
+
+ Insert text after the user’s input and before the model’s response. This can help prepare the model for a response.
+ 
+ 
+Post-response text:
+----------------------
+
+ Insert text after the model’s generated response to encourage further user input, as when modeling a conversation.
+
+When using the Chat playground, you can customize the setup description to set the context for the chat session; and also set the following parameters:
+Max response: Set a limit on the number of tokens per model response. The API supports a maximum of 4000 tokens shared between the prompt (including system message, examples, message history, and user query) and the model's response. One token is roughly four characters for typical English text.
+Top P: Similar to temperature, this controls randomness but uses a different method. Lowering Top P narrows the model’s token selection to likelier tokens. Increasing Top P lets the model choose from tokens with both high and low likelihood. Try adjusting temperature or Top P but not both.
+Past messages included: Select the number of past messages to include in each new API request. Including past messages helps give the model context for new user queries. Setting this number to 10 will include five user queries and five system responses.
+
+---------------------
+Temperature - 0.1 - "The cat is on the ...." ==> Roof 
+Temperature - 1.0 " The cat is on the .... " ===> Everest, tree, balcony, roof 
+
+
+Top-P 
+---------
+Randomness and wider result - Use more top-P 
+Less randomness - Use less top-P 
+
+top-p = 0.9 - " The cat is on the .... " ===> Everest, tree, balcony, roof
+top-P = 0.1 - Top 10% next most likely answers = " The cat is on the .... " ===> Everest, tree 
+
+==================================
+
+- Completion: This endpoint is used when you want the model to generate a completion for a given input prompt. The model takes the input prompt and generates one or more predicted completions. For example, if you provide the prompt "The weather today is", the model might generate a completion like "sunny and warm". This endpoint is accessible at https://api.openai.com/v1/completions.-
+
+ Embeddings: This endpoint is used when you want to convert a piece of text into a vector representation. The model takes the input and returns a vector that represents the input in a high-dimensional space. These vectors can be used for a variety of tasks, such as measuring the similarity between two pieces of text. For example, the embeddings for the words "cat" and "kitten" would be closer together than the embeddings for "cat" and "car". This endpoint is accessible at https://api.openai.com/v1/embeddings
+
+
+.- ChatCompletion: This endpoint is used when you want the model to generate a completion in the context of a chat conversation. The model takes the input in the form of a chat conversation, where each message is associated with a role (such as "user" or "assistant"), and generates the next chat completion. For example, if the conversation so far is {"role": "user", "content": "Tell me a joke"}, the model might generate a completion like {"role": "assistant", "content": "Why don't scientists trust atoms? Because they make up everything!"}. This endpoint is accessible at https://api.openai.com/v1/chat/completions.These endpoints provide a simple yet powerful interface for interacting with AI models. They allow you to leverage the capabilities of the models for a wide range of tasks, from generating text to measuring text similarity and conducting interactive conversations.
+
+========================================================
+import os
+from dotenv import load_dotenv
+from openai import AzureOpenAI  # Add Azure OpenAI package
+
+def main():
+    try:
+        # Get configuration settings
+        load_dotenv()
+        azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
+        azure_oai_key = os.getenv("AZURE_OAI_KEY")
+        azure_oai_model = os.getenv("AZURE_OAI_MODEL")
+
+        # Read text from file
+        text = open(file="../text-files/sample-text.txt", encoding="utf8").read()
+
+        print("\nSending request for summary to Azure OpenAI endpoint...\n\n")
+
+        # Initialize the Azure OpenAI client
+        client = AzureOpenAI(
+            azure_endpoint=azure_oai_endpoint,
+            api_key=azure_oai_key,
+            api_version="2023-05-15"
+        )
+
+        # Send request to Azure OpenAI model
+        response = client.chat.completions.create(
+            model=azure_oai_model,
+            temperature=0.7,
+            max_tokens=120,
+            messages=[
+                {"role": "system", "content": "You are a helpful assistant."},
+                {"role": "user", "content": f"Summarize the following text in 20 words or less:\n{text}"}
+            ]
+        )
+
+        print("Summary: " + response.choices[0].message.content + "\n")
+
+    except Exception as ex:
+        print(ex)
+
+if __name__ == '__main__':
+    main()
+
+=======================================================
+Act as a prompt generator for ChatGPT. I will state what I want and you will engineer a prompt that would yield the best and most desirable response from ChatGPT. 
+Each prompt should involve asking ChatGPT to "Act as ...", for example, "Act as a lawyer" or "Act as a Powershell assistant". 
+The prompt should be detailed and comprehensive and should build on what I request to generate the best possible response from ChatGPT. 
+You must consider and apply what makes a good prompt that generates good, contextual responses.
+Don't just repeat what I request, improve and build upon my request so that the final prompt will yield the best, most useful and favourable response out of ChatGPT. 
+Place any variables in square brackets Here is the prompt I want: 
+
+============================================================
+# Add OpenAI import
+from openai import AzureOpenAI
+import os
+from dotenv import load_dotenv
+
+# Set to True to print the full response from OpenAI for each call
+print_full_response = False
+
+def main():
+    try:
+        # Get configuration settings
+        load_dotenv()
+        azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
+        azure_oai_key = os.getenv("AZURE_OAI_KEY")
+        azure_oai_model = os.getenv("AZURE_OAI_MODEL")
+
+        # Initialize the Azure OpenAI client
+        client = AzureOpenAI(
+            azure_endpoint=azure_oai_endpoint,
+            api_key=azure_oai_key,
+            api_version="2023-05-15"
+        )
+
+        while True:
+            print('1: Basic prompt (no prompt engineering)\n' +
+                  '2: Prompt with email formatting and basic system message\n' +
+                  '3: Prompt with formatting and specifying content\n' +
+                  '4: Prompt adjusting system message to be light and use jokes\n' +
+                  '\'quit\' to exit the program\n')
+            command = input('Enter a number:')
+            if command == '1':
+                call_openai_model("../prompts/basic.txt", azure_oai_model, client)
+            elif command == '2':
+                call_openai_model("../prompts/email-format.txt", azure_oai_model, client)
+            elif command == '3':
+                call_openai_model("../prompts/specify-content.txt", azure_oai_model, client)
+            elif command == '4':
+                call_openai_model("../prompts/specify-tone.txt", azure_oai_model, client)
+            elif command.lower() == 'quit':
+                print('Exiting program...')
+                break
+            else:
+                print("Invalid input. Please try again.")
+
+    except Exception as ex:
+        print(ex)
+
+def call_openai_model(messages_file, model, client):
+    # In this sample, each file contains both the system and user messages
+    # First, read them into variables, strip whitespace, then build the messages array
+    with open(file=messages_file, encoding="utf8") as file:
+        system_message = file.readline().split(':', 1)[1].strip()
+        user_message = file.readline().split(':', 1)[1].strip()
+
+    # Print the messages to the console
+    print("System message: " + system_message)
+    print("User message: " + user_message)
+
+    # Build the messages array
+    messages = [
+        {"role": "system", "content": system_message},
+        {"role": "user", "content": user_message},
+    ]
+
+    # Print the messages array
+    print("Messages array: \n", messages)
+
+    # Call the Azure OpenAI model
+    response = client.chat.completions.create(
+        model=model,
+        messages=messages,
+        temperature=0.7,
+        max_tokens=800
+    )
+
+    if print_full_response:
+        print(response)
+
+    print("Completion: \n\n" + response.choices[0].message.content + "\n")
+
+if __name__ == '__main__':
+    main()
+
+
